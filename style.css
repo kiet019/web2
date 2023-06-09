@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 * {
   box-sizing: border-box;
   position: relative;
 }
+
 .fado-container {
   max-width: 1220px;
   margin: auto;
@@ -14,40 +16,40 @@
 .calculate-shipping-split {
   display: grid;
   grid-template-columns: 50% 2% 48%;
-  margin-top: 2rem;
+  margin-top: 2em;
 }
 .shipping-calculator {
   border: 1px solid #b11e22;
-  border-radius: 1rem;
-  padding: 1rem 3em 1em;
+  border-radius: 1em;
+  padding: 1em 3em 1em;
   box-shadow: 0px 0px 10px #e7e7e7;
 }
 .shipping-logo {
-  margin-top: 1rem;
+  margin-top: 1em;
   display: flex;
 }
 .logo {
   object-fit: cover;
   object-position: center;
-  width: 4rem;
-  height: 4rem;
+  width: 4em;
+  height: 4em;
 }
 .text {
-  margin: 0.5rem;
+  margin: 0.5em;
   font-size: medium;
-  line-height: 1.3rem;
+  line-height: 1.3em;
 }
 .trueprice-disclaimer {
   font-size: small;
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 }
 .shipping-from {
-  margin-top: 0.5rem;
-  padding-left: 3rem;
-  padding-right: 6rem;
+  margin-top: 0.5em;
+  padding-left: 3em;
+  padding-right: 6em;
   border-radius: 4px;
-  height: 2.5rem;
-  font-size: 1.2rem;
+  height: 2.5em;
+  font-size: 1.2em;
   width: 100%;
   background-color: #d0dde6;
 }
@@ -56,12 +58,12 @@
 }
 .delivering-to {
   background-color: #d0dde6;
-  margin-top: 0.5rem;
-  padding-left: 3rem;
-  padding-right: 6rem;
+  margin-top: 0.5em;
+  padding-left: 3em;
+  padding-right: 6em;
   border-radius: 4px;
-  height: 2.5rem;
-  font-size: 1.2rem;
+  height: 2.5em;
+  font-size: 1.2em;
   width: 100%;
 }
 .delivering-to:focus {
@@ -73,12 +75,12 @@
   left: 15px;
 }
 .weight {
-  margin-top: 0.5rem;
-  padding-left: 3rem;
-  padding-right: 6rem;
+  margin-top: 0.5em;
+  padding-left: 3em;
+  padding-right: 6em;
   border-radius: 4px;
-  height: 2.5rem;
-  font-size: 1.2rem;
+  height: 2.5em;
+  font-size: 1.2em;
   width: 100%;
   border: 0.8px solid black;
 }
@@ -88,21 +90,21 @@
   right: 15px;
 }
 .greater-dims {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   line-height: 1.5;
 }
 .btn-link {
   border: none;
   background-color: white;
   padding: 0px;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   color: blue;
   text-decoration: underline;
   cursor: pointer;
 }
 .shipping-form-submit {
   width: 100%;
-  height: 2.5rem;
+  height: 2.5em;
   background-color: #0b5b8a;
   color: white;
   font-size: xx-small;
@@ -115,7 +117,7 @@
   cursor: pointer;
 }
 .btn-view {
-  margin-top: 1rem;
+  margin-top: 1em;
   border: none;
   background-color: white;
   color: blue;
@@ -124,11 +126,11 @@
   font-size: small;
 }
 .calculate-shipping-split-right {
-  padding: 1rem 3em 1em;
+  padding: 1em 3em 1em;
 }
 .calculate-shipping-split-desc {
   font-size: large;
-  line-height: 1.8rem;
+  line-height: 1.8em;
 }
 .btn-signup {
   display: block;
@@ -137,11 +139,11 @@
   background-color: #0b5b8a;
   width: 50%;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   border-radius: 5px;
 }
 .calculate-shipping-save-heading {
-  margin-top: 4rem;
+  margin-top: 4em;
 }
 .calculate-shipping-save-list {
   display: grid;
@@ -149,23 +151,23 @@
 }
 .calculate-shipping-save-item {
   box-shadow: 0px 0px 15px #e7e7e7;
-  height: 25rem;
-  padding: 1.5rem;
-  margin: 1.5rem;
+  height: 25em;
+  padding: 1.5em;
+  margin: 1.5em;
 }
 .calculate-shipping-save-item-top {
   display: flex;
 }
 .calculate-shipping-save-item-icon {
-  margin-right: 2rem;
+  margin-right: 2em;
 }
 .calculate-shipping-save-item-desc {
-  font-size: 1.1rem;
-  line-height: 1.7rem;
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 .calculate-shipping-save-item-link {
-  font-size: 1.1rem;
-  line-height: 1.7rem;
+  font-size: 1.1em;
+  line-height: 1.7em;
   text-align: center;
 }
 .calculate-shipping-save-sub-heading {
@@ -178,36 +180,36 @@
   background-color: #0b5b8a;
   width: 20%;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   border-radius: 5px;
 }
 .faqs-heading {
-  margin-top: 5rem;
+  margin-top: 5em;
   text-align: center;
 }
 .collapsible {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 .collapsible-btn {
-  padding: 1rem 0rem 1rem 3rem;
-  height: 3.5rem;
+  padding: 1em 0em 1em 3em;
+  height: 3.5em;
   width: 100%;
   text-align: left;
   background-color: #fafafa;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   letter-spacing: 2px;
 }
 .collapsible-content {
   display: none;
-  padding: 1rem 0rem 2rem 3rem;
+  padding: 1em 0em 2em 3em;
   height: fit-content;
   width: 100%;
   text-align: left;
   background-color: #fafafa;
   border: none;
-  font-size: 1rem;
+  font-size: 1em;
   letter-spacing: 2px;
 }
 .ul {
