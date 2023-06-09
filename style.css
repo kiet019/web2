@@ -157,9 +157,9 @@ h3 {
 }
 .calculate-shipping-save-item {
   box-shadow: 0px 0px 15px #e7e7e7;
-  height: 25em;
+  height: 30em;
   padding: 1.5em;
-  margin: 1.5em;
+  margin: 2em;
 }
 .calculate-shipping-save-item-top {
   display: flex;
@@ -168,11 +168,12 @@ h3 {
   margin-right: 2em;
 }
 .calculate-shipping-save-item-desc {
-  font-size: 1.1em;
+  margin-top: 2em;
+  font-size: 1.2em;
   line-height: 1.7em;
 }
 .calculate-shipping-save-item-link {
-  font-size: 1.1em;
+  font-size: 1.3em;
   line-height: 1.7em;
   text-align: center;
 }
@@ -212,7 +213,7 @@ h3 {
 }
 .collapsible-content {
   display: none;
-  padding: 0.5em 2em 0.5em 3em;
+  padding: 0.5em 3em 2em 3em;
   height: fit-content;
   width: 100%;
   text-align: left;
@@ -253,4 +254,10 @@ h3 {
 .calculate-shipping-split-heading {
   font-weight: 700;
   font-size: 1.5em;
+}
+.calculate-shipping-save-item-heading {
+  font-weight: 600;
+}
+.calculate-shipping-save-item-heading {
+  margin-top: 0.4em;
 }
