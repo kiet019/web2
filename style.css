@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
 * {
-  box-sizing: border-box;
   position: relative;
+  box-sizing: border-box;
 }
-
+h3 {
+  font-weight: 800;
+}
 .fado-container {
   max-width: 1220px;
   margin: auto;
@@ -21,7 +22,7 @@
 .shipping-calculator {
   border: 1px solid #b11e22;
   border-radius: 1em;
-  padding: 1em 3em 1em;
+  padding: 1em 4em 1em;
   box-shadow: 0px 0px 10px #e7e7e7;
 }
 .shipping-logo {
@@ -34,7 +35,10 @@
   width: 4em;
   height: 4em;
 }
-.text {
+.mylabel {
+  font-size: 1.2em;
+}
+.text-logo {
   margin: 0.5em;
   font-size: medium;
   line-height: 1.3em;
@@ -90,7 +94,8 @@
   right: 15px;
 }
 .greater-dims {
-  font-size: 0.9em;
+  margin: 1em 0em 1em;
+  font-size: 1.1em;
   line-height: 1.5;
 }
 .btn-link {
@@ -104,10 +109,10 @@
 }
 .shipping-form-submit {
   width: 100%;
-  height: 2.5em;
+  height: 5em;
   background-color: #0b5b8a;
   color: white;
-  font-size: xx-small;
+  font-size: x-small;
   letter-spacing: 0.3px;
   border: none;
   border-radius: 5px;
@@ -130,7 +135,8 @@
 }
 .calculate-shipping-split-desc {
   font-size: large;
-  line-height: 1.8em;
+  line-height: 1.5em;
+  margin: 1.2em 0em 1.2em;
 }
 .btn-signup {
   display: block;
@@ -172,6 +178,8 @@
 }
 .calculate-shipping-save-sub-heading {
   text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .btn-signin {
   display: block;
@@ -198,12 +206,13 @@
   text-align: left;
   background-color: #fafafa;
   border: none;
-  font-size: 1.3em;
+  font-size: 1.5em;
+  font-weight: 500;
   letter-spacing: 2px;
 }
 .collapsible-content {
   display: none;
-  padding: 1em 0em 2em 3em;
+  padding: 1em 0em 2em 4.5em;
   height: fit-content;
   width: 100%;
   text-align: left;
@@ -218,12 +227,29 @@
   padding: 0px;
 }
 .li {
-    text-decoration: none;
+  text-decoration: none;
 }
 .arrow-down {
-    position: absolute;
-    top: -8%;
-    right: 20px;
-    transform: translateY(+50%);
-    font-size: xx-large;
-  }
+  position: absolute;
+  top: -8%;
+  right: 20px;
+  transform: translateY(+50%);
+  font-size: xx-large;
+}
+.faqs-heading {
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+.calculate-shipping-save-item-top {
+  margin-bottom: 2em;
+}
+.calculate-shipping-save-heading  {
+  font-weight: 700;
+}
+.calculate-shipping-heading {
+  font-weight: 700;
+}
+.calculate-shipping-split-heading {
+  font-weight: 700;
+  font-size: 1.5em;
+}
