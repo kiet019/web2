@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+.fado-container {
+  max-width: 1220px;
+  margin: auto;
+  font-family: Avenir W01, sans-serif;
+}
+.align-center {
+  text-align: center;
+}
+.calculate-shipping-split {
+  display: grid;
+  grid-template-columns: 50% 2% 48%;
+  margin-top: 2rem;
+}
+.shipping-calculator {
+  border: 1px solid #b11e22;
+  border-radius: 1rem;
+  padding: 1rem 3em 1em;
+  box-shadow: 0px 0px 10px #e7e7e7;
+}
+.shipping-logo {
+  margin-top: 1rem;
+  display: flex;
+}
+.logo {
+  object-fit: cover;
+  object-position: center;
+  width: 4rem;
+  height: 4rem;
+}
+.text {
+  margin: 0.5rem;
+  font-size: medium;
+  line-height: 1.3rem;
+}
+.trueprice-disclaimer {
+  font-size: small;
+  margin-bottom: 2rem;
+}
+.shipping-from {
+  margin-top: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 6rem;
+  border-radius: 4px;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  width: 100%;
+  background-color: #d0dde6;
+}
+.shipping-from:focus {
+  box-shadow: 0px 0px 5px black;
+}
+.delivering-to {
+  background-color: #d0dde6;
+  margin-top: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 6rem;
+  border-radius: 4px;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.delivering-to:focus {
+  box-shadow: 0px 0px 5px black;
+}
+.location-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+.weight {
+  margin-top: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 6rem;
+  border-radius: 4px;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  width: 100%;
+  border: 0.8px solid black;
+}
+.weight-icon {
+  position: absolute;
+  top: 55%;
+  right: 15px;
+}
+.greater-dims {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.btn-link {
+  border: none;
+  background-color: white;
+  padding: 0px;
+  font-size: 0.9rem;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.shipping-form-submit {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #0b5b8a;
+  color: white;
+  font-size: xx-small;
+  letter-spacing: 0.3px;
+  border: none;
+  border-radius: 5px;
+}
+.shipping-form-submit:hover {
+  background-color: #0a496d;
+  cursor: pointer;
+}
+.btn-view {
+  margin-top: 1rem;
+  border: none;
+  background-color: white;
+  color: blue;
+}
+.disclaimer {
+  font-size: small;
+}
+.calculate-shipping-split-right {
+  padding: 1rem 3em 1em;
+}
+.calculate-shipping-split-desc {
+  font-size: large;
+  line-height: 1.8rem;
+}
+.btn-signup {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: #0b5b8a;
+  width: 50%;
+  margin: auto;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+.calculate-shipping-save-heading {
+  margin-top: 4rem;
+}
+.calculate-shipping-save-list {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.calculate-shipping-save-item {
+  box-shadow: 0px 0px 15px #e7e7e7;
+  height: 25rem;
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+.calculate-shipping-save-item-top {
+  display: flex;
+}
+.calculate-shipping-save-item-icon {
+  margin-right: 2rem;
+}
+.calculate-shipping-save-item-desc {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+.calculate-shipping-save-item-link {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  text-align: center;
+}
+.calculate-shipping-save-sub-heading {
+  text-align: center;
+}
+.btn-signin {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: #0b5b8a;
+  width: 20%;
+  margin: auto;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+.faqs-heading {
+  margin-top: 5rem;
+  text-align: center;
+}
+.collapsible {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.collapsible-btn {
+  padding: 1rem 0rem 1rem 3rem;
+  height: 3.5rem;
+  width: 100%;
+  text-align: left;
+  background-color: #fafafa;
+  border: none;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+.collapsible-content {
+  display: none;
+  padding: 1rem 0rem 2rem 3rem;
+  height: fit-content;
+  width: 100%;
+  text-align: left;
+  background-color: #fafafa;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+.ul {
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+}
+.li {
+    text-decoration: none;
+}
+.arrow-down {
+    position: absolute;
+    top: -8%;
+    right: 20px;
+    transform: translateY(+50%);
+    font-size: xx-large;
+  }

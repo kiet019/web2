@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="fado-container">
+        <h2 class="calculate-shipping-heading align-center">
+          Estimate Shipping Rates With Our Shipping Calculator
+        </h2>
+        <div class="calculate-shipping-split">
+          <div class="shipping-calculator">
+            <h3>Get Shipping Rates</h3>
+            <div class="shipping-logo">
+              <img alt="" src="logo.jpg" class="logo" />
+              <div class="text">
+                TruePrice<br />
+                Guaranteed Pricing
+              </div>
+            </div>
+            <p class="trueprice-disclaimer desktop">
+              Our revolutionary pricing system calculates rates by weight only*,
+              not dimensions.
+            </p>
+            <form class="shipping-form">
+              <div style="margin-bottom: 1rem">
+                <label for="from">Shipping From</label>
+                <select id="from" class="shipping-from"></select>
+                <i class="material-icons location-icon">location_on</i>
+                <script>
+                  var options = setup.optionsFrom;
+                  for (var i = 0; i < options.length; i++) {
+                    var shippingFromOption = $("<option></option>")
+                      .addClass("shipping-from-option")
+                      .val(options[i])
+                      .text(options[i]);
+                    $(".shipping-from").append(shippingFromOption);
+                  }
+                </script>
+              </div>
+              <div style="margin-bottom: 1rem">
+                <label for="to">Delivering To</label>
+                <select id="to" class="delivering-to"></select>
+                <i class="material-icons location-icon">location_on</i>
+                <script>
+                  var options = setup.optionsTo;
+                  for (var i = 0; i < options.length; i++) {
+                    var deliveringTo = $("<option></option>")
+                      .addClass("delivering-to-option")
+                      .val(options[i])
+                      .text(options[i]);
+                    $(".delivering-to").append(deliveringTo);
+                  }
+                </script>
+              </div>
+              <div>
+                <label for="weight">Pakage Weight</label>
+                <input type="number" id="weight" class="weight" />
+                <i class="material-icons location-icon">monitor_weight</i>
+                <i class="weight-icon">kg</i>
+              </div>
+              <h4 class="greater-dims">
+                If your package's length + width + height is greater than 72
+                inches, <br />
+                <a class="btn-link" href="#"> click here </a>
+                to provide the dimensions
+              </h4>
+              <button type="submit" class="shipping-form-submit">
+                GET MY RATES
+              </button>
+            </form>
+            <script>
+              $(".shipping-form").on("submit keydown", function (event) {
+                if (event.type === "keydown" && event.keyCode !== 13) {
+                  return;
+                }
+                event.preventDefault(); // Ngăn chặn hành vi mặc định khi gửi form
+
+                var shippingFromValue = $("#from").val();
+                var deliveringToValue = $("#to").val();
+                var weightValue = $("#weight").val();
+
+                console.log("Shipping From: " + shippingFromValue);
+                console.log("Delivering To: " + deliveringToValue);
+                console.log("Package Weight: " + weightValue);
+              });
+            </script>
+            <div style="display: flex; justify-content: space-around">
+              <button
+                class="btn-view"
+                data-bind="visible: modalReady, click: openModal"
+                style=""
+                type="button"
+              >
+                View all rates up to 10 Pounds
+              </button>
+            </div>
+            <p class="disclaimer">
+              *While 99% of shipments are calculated by weight only, TruePrice
+              excludes packages with linear dimensions (length + width + height)
+              greater than 72 inches (183 cm).
+            </p>
+          </div>
+          <div></div>
+          <div class="calculate-shipping-split-right">
+            <h3 class="calculate-shipping-split-heading">
+              Tell Us Your Package Weight And Dimensions
+            </h3>
+            <p class="calculate-shipping-split-desc">
+              Get an estimate on shipping to your home country using the MyUS
+              International Shipping Calculator. Simply enter where your package
+              is coming from, where it is being delivered, and the weight of the
+              items you are shipping. Then
+              <a
+                class="link-ada"
+                href="/signup/"
+                aria-label="Sign Up for a My US Membership"
+                >use your MyUS online account</a
+              >
+              to have your package delivered to your doorstep.
+            </p>
+            <h3 class="calculate-shipping-split-heading">
+              How Are Shipping Costs Calculated?
+            </h3>
+            <p class="calculate-shipping-split-desc">
+              While other international couriers use complicated formulas, MyUS
+              makes figuring out shipping costs easy. We calculate our
+              <a class="link-ada" href="/benefits/shipping/true-price/"
+                >guaranteed international shipping rates</a
+              >
+              using just package weight* through our MyUS TruePrice™ on
+              purchases from the USA and UK.
+            </p>
+            <div
+              class="calculate-shipping-save-sub align-center"
+              style="margin-top: 50px"
+            >
+              <a
+                class="btn-signup"
+                href="/signup/"
+                aria-label="Become A  MyUS Member"
+                >Become A Member</a
+              >
+            </div>
+          </div>
+        </div>
+        <h2 class="calculate-shipping-save-heading align-center">
+          How to save money on international shipping
+        </h2>
+        <div class="calculate-shipping-save-list">
+          <div class="calculate-shipping-save-item">
+            <div class="calculate-shipping-save-item-top">
+              <span class="calculate-shipping-save-item-icon"
+                ><img
+                  src="https://static.nc-myus.com/images/common/ux/pricing/step/consolidation-b.png"
+                  alt="Consolidate"
+              /></span>
+              <h4 class="calculate-shipping-save-item-heading">
+                MyUS Premiere Package Consolidation
+              </h4>
+            </div>
+            <p class="calculate-shipping-save-item-desc">
+              Get lower shipping rates by shipping everything in one box!
+              Shipping one box with items from multiple retailers is far less
+              expensive than shipping separate boxes. Let us maximize your
+              shipping savings!
+            </p>
+            <p class="calculate-shipping-save-item-link">
+              <a class="link-ada" href="/benefits/shipping/consolidation/"
+                >Learn about MyUS Premier Package Consolidation</a
+              >
+            </p>
+          </div>
+          <div class="calculate-shipping-save-item">
+            <div class="calculate-shipping-save-item-top">
+              <span class="calculate-shipping-save-item-icon"
+                ><img
+                  src="https://static.nc-myus.com/images/common/ux/pricing/step/global-b.png"
+                  alt="Global"
+              /></span>
+              <h4 class="calculate-shipping-save-item-heading">
+                Discount Global Carrier Rates
+              </h4>
+            </div>
+            <p class="calculate-shipping-save-item-desc">
+              The MyUS online shipping request system allows you to choose from
+              a variety of shipping carriers, discounted rates, and delivery
+              times. Save big when you allow us to pick the most affordable
+              express shipping option with MyUS Preferred Express!
+            </p>
+            <p class="calculate-shipping-save-item-link">
+              <a class="link-ada" href="/benefits/shipping/discounted-rates/"
+                >Learn about discount carrier rates</a
+              >
+            </p>
+          </div>
+          <div class="calculate-shipping-save-item">
+            <div class="calculate-shipping-save-item-top">
+              <span class="calculate-shipping-save-item-icon"
+                ><img
+                  src="https://static.nc-myus.com/images/common/ux/pricing/step/usa-b.png"
+                  alt="USA"
+              /></span>
+              <h4 class="calculate-shipping-save-item-heading">
+                Avoid Volumetric Weight Shipping Charges
+              </h4>
+            </div>
+            <p class="calculate-shipping-save-item-desc">
+              Estimating shipping costs is simple. Our straightforward pricing
+              system makes it easy to get a quote on international shipping
+              rates, with no hidden charges or surprises thanks to MyUS
+              TruePrice™ guaranteed pricing.
+            </p>
+
+            <p class="calculate-shipping-save-item-link">
+              <a class="link-ada" href="/benefits/shipping/true-price/"
+                >Learn how to save on international shipping costs</a
+              >
+            </p>
+          </div>
+          <div class="calculate-shipping-save-item">
+            <div class="calculate-shipping-save-item-top">
+              <span class="calculate-shipping-save-item-icon"
+                ><img
+                  src="https://static.nc-myus.com/images/common/ux/pricing/step/pay-b.png"
+                  alt="pay"
+              /></span>
+              <h4 class="calculate-shipping-save-item-heading">
+                Pay Less with No US Sales Tax
+              </h4>
+            </div>
+            <p class="calculate-shipping-save-item-desc">
+              Your MyUS address comes with US sales tax-free status! That means
+              you pay 0% US sales tax on purchases and save more when you shop
+              internationally at your favorite US stores.
+            </p>
+            <p class="calculate-shipping-save-item-link">
+              <a
+                class="link-ada"
+                href="/benefits/shopping/avoid-paying-us-sales-tax/"
+                >Learn how to earn US sales tax-free status</a
+              >
+            </p>
+          </div>
+          <div class="calculate-shipping-save-item">
+            <div class="calculate-shipping-save-item-top">
+              <span class="calculate-shipping-save-item-icon"
+                ><img
+                  src="https://static.nc-myus.com/images/common/ux/pricing/step/charges-b.png"
+                  alt="Charges"
+              /></span>
+              <h4 class="calculate-shipping-save-item-heading">
+                The Best Prices on USA Products
+              </h4>
+            </div>
+            <p class="calculate-shipping-save-item-desc">
+              Buy top products and brands direct from US stores and save big
+              versus shopping in your home country. Save even more with our
+              sales bulletins, exclusive deals, and hand-picked product
+              recommendations!
+            </p>
+            <p class="calculate-shipping-save-item-link">
+              <a class="link-ada" href="/benefits/shopping/start-shopping/"
+                >Learn about shopping and saving at US stores</a
+              >
+            </p>
+          </div>
+        </div>
+        <h3 class="calculate-shipping-save-sub-heading">
+          Save up to 80% on shipping costs. Sign up today and start shipping
+          internationally.
+        </h3>
+        <div class="calculate-shipping-save-sub align-center">
+          <a class="btn-signin" aria-label="Become A  MyUS Member">Sign in</a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="fado-container">
+        <h2 class="faqs-heading">
+          International Shipping Rates Calculator FAQs
+        </h2>
+
+        <script>
+          $(document).ready(function () {
+            $(".collapsible-btn").click(function () {
+              $(this).next(".collapsible-content").slideToggle();
+            });
+          });
+        </script>
+        <div id="collapsible-container"></div>
+        <script>
+          $(document).ready(function () {
+            var QandA = setup.QandA;
+
+            var container = $("#collapsible-container");
+
+            QandA.forEach(function (item) {
+              var collapsible = $("<div></div>").addClass("collapsible");
+              var button = $("<button></button>")
+                .addClass("collapsible-btn")
+                .text(item.question);
+              var content = $("<div></div>").addClass("collapsible-content");
+              var arrow = $("<i></i>").addClass("material-icons arrow-down").text("keyboard_arrow_down");
+              var ul = $("<ul></ul>").addClass("ul");
+              var li = $("<li></li>").text(item.answer).addClass("li");
+
+              ul.append(li);
+              content.append(ul);
+              button.append(arrow);
+              collapsible.append(button);
+              collapsible.append(content);
+              container.append(collapsible);
+            });
+
+            $(".collapsible-btn").click(function () {
+              $(this).next(".collapsible-content").slideToggle();
+            });
+          });
+          
+        </script>
+      </div>
+    </section>
+  </body>
+</html>
